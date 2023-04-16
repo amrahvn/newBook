@@ -28,6 +28,11 @@ namespace BookApp5.App.Services.Implementations
 
         public void Shows()
         {
+            if (books.Length == 0)
+            {
+                Console.WriteLine( "Not aviable");
+            }
+        
             foreach(Book book in books)
             {
                 Console.WriteLine($"Book name:{book.Name}, Book price:{book.Price}, CreatedDate: {book.CreatedDate}");
